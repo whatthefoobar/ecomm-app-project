@@ -26,6 +26,7 @@ main {
 .btn-primary {
   background-color: #f0c040;
   color: #000000; /*maybe change up colors of cart btn*/
+  border: none;
 }
 
 .products {
@@ -60,3 +61,10 @@ main {
   font-weight: 600;
   color: black;
 }
+/* .spinner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+} */
+/* must fix spinner allign center */
