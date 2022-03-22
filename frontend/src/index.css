@@ -51,6 +51,10 @@ main {
   padding: 1rem;
 }
 
+.img-large {
+  max-width: 100%;
+}
+
 .product-info a {
   text-decoration: none;
   font-weight: 600;
