@@ -12,9 +12,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .links {
-  text-decoration: none;
-} /*remove underline from bootstrap Link tag*/
-
+  text-decoration: none; /*remove underline from bootstrap Link tag*/
+  /*maybe change color of text and add on hover effect(?)*/
+}
 .site-container {
   min-height: 100vh;
 }
@@ -54,6 +54,10 @@ main {
 
 .img-large {
   max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
 }
 
 .product-info a {
