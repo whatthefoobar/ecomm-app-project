@@ -28,7 +28,7 @@ app.use('/api/users', userRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
-}); // error handler for express
+}); // error handler middleware for express
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
