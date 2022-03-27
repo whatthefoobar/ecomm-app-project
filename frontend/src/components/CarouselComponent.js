@@ -21,7 +21,7 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100 height"
-            src="/images/home221.jpg"
+            src="/images/home.jpeg"
             alt="Second slide"
           />
 
@@ -34,7 +34,7 @@ const CarouselComponent = () => {
         <Carousel.Item>
           <img
             className="d-block w-100 height"
-            src="/images/home221.jpg"
+            src="/images/home5.jpg"
             alt="Third slide"
           />
 
