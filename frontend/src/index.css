@@ -48,6 +48,9 @@ main {
   color: #000000; /*maybe change up colors of cart btn*/
   border: none;
 }
+.btn-outline-dark {
+  font-weight: 600;
+}
 
 .products {
   display: flex;
@@ -111,6 +114,18 @@ main {
   object-position: center top;
 }
 .caption-color {
+  padding: 20px;
   background: rgba(255, 255, 255, 0.521);
   color: black;
+}
+.caption-color h3 {
+  font-size: 1.8rem;
+  padding: 10px;
+}
+.caption-color p {
+  font-size: 1.2rem;
+}
+.caption-color .btn {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
 }

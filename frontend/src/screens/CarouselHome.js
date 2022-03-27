@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 // import Container from 'react-bootstrap/esm/Container';
 import { Link } from 'react-router-dom';
 
-const CarouselComponent = () => {
+const CarouselHome = () => {
   return (
     <Carousel variant="dark" fade>
       <Carousel.Item>
@@ -15,7 +15,7 @@ const CarouselComponent = () => {
         <Carousel.Caption className="caption-color">
           <h3>Find your signiture style</h3>
           <p>Explore our latest threads</p>
-          <Link to="/products" className="btn btn-primary">
+          <Link to="/products" className="btn btn-outline-dark">
             Explore
           </Link>
         </Carousel.Caption>
@@ -31,7 +31,7 @@ const CarouselComponent = () => {
         <Carousel.Caption className="caption-color">
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <Link to="/products" className="btn btn-primary">
+          <Link to="/products" className="btn btn-outline-dark">
             Explore
           </Link>
         </Carousel.Caption>
@@ -49,7 +49,7 @@ const CarouselComponent = () => {
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
-          <Link to="/products" className="btn btn-primary">
+          <Link to="/products" className="btn btn-outline-dark">
             Explore
           </Link>
         </Carousel.Caption>
@@ -58,4 +58,4 @@ const CarouselComponent = () => {
   );
 };
 
-export default CarouselComponent;
+export default CarouselHome;
