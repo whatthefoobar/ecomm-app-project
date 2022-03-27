@@ -17,6 +17,7 @@ import ShippingAddressScreen from './screens/ShippingAddressScreen';
 import SignupScreen from './screens/SignupScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import CarouselComponent from './components/CarouselComponent';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -34,12 +35,12 @@ function App() {
         <ToastContainer position="bottom-center" limit={1} />
         <header>
           <Navbar bg="dark" variant="dark">
-            <Container>
+            <Container className="nav-bar">
               <LinkContainer to="/">
                 <Navbar.Brand>Siren</Navbar.Brand>
               </LinkContainer>
-              <Nav className="me-auto">
-                <Link to="/cart" className="nav-link">
+              <Nav>
+                <Link to="/cart" className="nav-link ">
                   Cart
                   {cart.cartItems.length > 0 && (
                     <Badge pill bg="danger">
@@ -74,23 +75,8 @@ function App() {
           </Navbar>
         </header>
         <main>
-          {/* <Container className="mt-3 home__intro">
-            <img
-              className="home__image"
-              src="./images/home.jpeg"
-              alt="shopping home"
-            />
-            <div className="home__text">
-              <h1>Latest Collection</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Tempore, soluta qui culpa error, possimus quasi aliquid vitae,
-                praesentium nobis repellendus nisi dolorem. Eveniet reiciendis
-                rerum laborum odio repudiandae eaque ullam?
-              </p>
-              <button className="btn btn-primary">Explore</button>
-            </div>
-          </Container> */}
+          {/* <CarouselComponent /> */}
+
           <Container className="mt-3">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
@@ -100,7 +86,8 @@ function App() {
               <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />}></Route>
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
-              <Route path="/" element={<HomeScreen />} />
+              <Route path="/products" element={<HomeScreen />} />
+              <Route path="/" element={<CarouselComponent />} />
             </Routes>
           </Container>
         </main>

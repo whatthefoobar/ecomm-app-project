@@ -105,3 +105,12 @@ main {
   align-items: center;
 } */
 /* must fix spinner allign center */
+.height {
+  height: 90vh;
+  object-fit: cover;
+  object-position: center top;
+}
+.caption-color {
+  background: rgba(255, 255, 255, 0.596);
+  color: black;
+}
