@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify'; // for that snazzy error msg box when login error
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
@@ -18,6 +18,7 @@ import SignupScreen from './screens/SignupScreen';
 import PaymentMethodScreen from './screens/PaymentMethodScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import CarouselHome from './screens/CarouselHome';
+import Error from './screens/Error';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -30,9 +31,10 @@ function App() {
     localStorage.removeItem('paymentMethod');
   };
   return (
-    <BrowserRouter>
+    <Router>
       <div className="d-flex flex-column site-container">
-        <ToastContainer position="bottom-center" limit={1} />
+        <ToastContainer position="bottom-center" limit={1} />{' '}
+        {/* for that snazzy error msg box when login error */}
         <header>
           <Navbar bg="dark" variant="dark">
             <Container className="nav-bar">
@@ -75,8 +77,6 @@ function App() {
           </Navbar>
         </header>
         <main>
-          {/* <CarouselComponent /> */}
-
           <Container className="mt-3">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
@@ -88,6 +88,7 @@ function App() {
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route path="/products" element={<HomeScreen />} />
               <Route path="/" element={<CarouselHome />} />
+              <Route path="*" element={<Error />} />
             </Routes>
           </Container>
         </main>
@@ -95,7 +96,7 @@ function App() {
           <div className="text-center">All rights reserved</div>
         </footer>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

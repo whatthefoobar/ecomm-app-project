@@ -13,8 +13,11 @@ const CarouselHome = () => {
           alt="First slide"
         />
         <Carousel.Caption className="caption-color">
-          <h3>Find your signiture style</h3>
-          <p>Explore our latest threads</p>
+          <h3>Let your clothes do the talking</h3>
+          <p>
+            True fashion shouldn't come with a human or natue cost .Explore our
+            latest sustainable threads
+          </p>
           <Link to="/products" className="btn btn-outline-dark">
             Explore
           </Link>
@@ -29,8 +32,8 @@ const CarouselHome = () => {
         />
 
         <Carousel.Caption className="caption-color">
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Find your signature style</h3>
+          <p>And stand out from the crowd</p>
           <Link to="/products" className="btn btn-outline-dark">
             Explore
           </Link>
@@ -45,9 +48,10 @@ const CarouselHome = () => {
         />
 
         <Carousel.Caption className="caption-color">
-          <h3>Third slide label</h3>
+          <h3>Bring color into your life</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            Be loud be proud and show your inner beauty off with the help of our
+            joyful pieces.
           </p>
           <Link to="/products" className="btn btn-outline-dark">
             Explore
