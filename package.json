@@ -1,0 +1,20 @@
+{
+  "name": "full-ecomm-mern",
+  "version": "1.0.0",
+  "description": "Learn with me how to create a full e-commerce webstite with a cart authentication and checkout option\r Optional: admin options",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install  && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatthefoobar/full-ecomm-MERN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatthefoobar/full-ecomm-MERN/issues"
+  },
+  "homepage": "https://github.com/whatthefoobar/full-ecomm-MERN#readme"
+}

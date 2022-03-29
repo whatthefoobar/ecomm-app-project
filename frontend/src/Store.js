@@ -76,7 +76,8 @@ function reducer(state, action) {
 }
 
 export function StoreProvider(props) {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState); // call state n dispatch wheevr we need
   const value = { state, dispatch };
   return <Store.Provider value={value}>{props.children} </Store.Provider>;
 }
+// wherever we need the state and how to update it import useContext and thisStore module and call on state, dispatch form useReducer

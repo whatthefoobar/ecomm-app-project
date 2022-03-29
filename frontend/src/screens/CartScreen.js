@@ -12,10 +12,10 @@ import axios from 'axios';
 
 export default function CartScreen() {
   const navigate = useNavigate();
-  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { state, dispatch: ctxDispatch } = useContext(Store); //this!
   const {
     cart: { cartItems },
-  } = state;
+  } = state; // take from state
 
   const updateCartHandler = async (item, quantity) => {
     const { data } = await axios.get(`/api/products/${item._id}`);
