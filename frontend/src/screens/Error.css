@@ -1,0 +1,13 @@
+.error {
+  text-align: center;
+}
+.error__header {
+  margin-top: 10vh;
+  font-size: 3rem;
+}
+.error__paragraph {
+  font-size: 1.7rem;
+}
+.error__button {
+  font-size: 1.4rem;
+}

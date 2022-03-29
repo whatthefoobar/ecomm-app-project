@@ -99,7 +99,9 @@ export default function PlaceOrderScreen() {
                 {cart.shippingAddress.city}, {cart.shippingAddress.postalCode},
                 {cart.shippingAddress.country}
               </Card.Text>
-              <Link to="/shipping">Edit</Link>
+              <Link to="/shipping" className={`links`}>
+                Edit
+              </Link>
             </Card.Body>
           </Card>
 
@@ -109,7 +111,9 @@ export default function PlaceOrderScreen() {
               <Card.Text>
                 <strong>Method:</strong> {cart.paymentMethod}
               </Card.Text>
-              <Link to="/payment">Edit</Link>
+              <Link to="/payment" className={`links`}>
+                Edit
+              </Link>
             </Card.Body>
           </Card>
 
@@ -126,7 +130,9 @@ export default function PlaceOrderScreen() {
                           alt={item.name}
                           className="img-fluid rounded img-thumbnail"
                         ></img>{' '}
-                        <Link to={`/product/${item.slug}`}>{item.name}</Link>
+                        <Link to={`/product/${item.slug}`} className={`links`}>
+                          {item.name}
+                        </Link>
                       </Col>
                       <Col md={3}>
                         <span>{item.quantity}</span>
@@ -136,7 +142,9 @@ export default function PlaceOrderScreen() {
                   </ListGroup.Item>
                 ))}
               </ListGroup>
-              <Link to="/cart">Edit</Link>
+              <Link to="/cart" className={`links`}>
+                Edit
+              </Link>
             </Card.Body>
           </Card>
         </Col>
@@ -176,6 +184,7 @@ export default function PlaceOrderScreen() {
                 <ListGroup.Item>
                   <div className="d-grid">
                     <Button
+                      variant="outline-dark"
                       type="button"
                       onClick={placeOrderHandler}
                       disabled={cart.cartItems.length === 0}

@@ -1,3 +1,4 @@
+import './CartScreen.css';
 import { useContext } from 'react';
 import { Store } from '../Store';
 import { Helmet } from 'react-helmet-async';
@@ -93,7 +94,7 @@ export default function CartScreen() {
                         onClick={() => removeItemHandler(item)}
                         variant="light"
                       >
-                        <i className="fas fa-trash"></i>
+                        <i className="fas fa-trash trash__btn"></i>
                       </Button>
                     </Col>
                   </Row>
@@ -117,7 +118,7 @@ export default function CartScreen() {
                   <div className="d-grid">
                     <Button
                       type="button"
-                      variant="primary"
+                      variant="outline-dark"
                       onClick={checkoutHandler}
                       disabled={cartItems.length === 0}
                     >

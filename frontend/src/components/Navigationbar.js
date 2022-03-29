@@ -1,3 +1,4 @@
+import './Navigationbar.css';
 import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import { LinkContainer } from 'react-router-bootstrap';
@@ -12,7 +13,7 @@ const Navigationbar = ({ cart, userInfo, signoutHandler }) => {
     <Navbar bg="dark" variant="dark">
       <Container className="nav-bar">
         <LinkContainer to="/">
-          <Navbar.Brand>Siren</Navbar.Brand>
+          <Navbar.Brand className="nav__logo">Siren</Navbar.Brand>
         </LinkContainer>
         <Nav>
           <Link to="/cart" className="nav-link ">

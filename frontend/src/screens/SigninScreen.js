@@ -65,11 +65,15 @@ export default function SigninScreen() {
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign In</Button>
+          <Button variant="outline-dark" type="submit">
+            Sign In
+          </Button>
         </div>
         <div className="mb-3">
           New customer?{' '}
-          <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+          <Link to={`/signup?redirect=${redirect}`} className={`links`}>
+            Create your account
+          </Link>
         </div>
       </Form>
     </Container>

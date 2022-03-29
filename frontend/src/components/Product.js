@@ -1,3 +1,4 @@
+import './Product.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
@@ -31,7 +32,7 @@ function Product({ product }) {
       <Link to={`/product/${product.slug}`} className={`links`}>
         <img src={product.image} className="card-img-top" alt={product.name} />
       </Link>
-      <Card.Body>
+      <Card.Body className="card__body">
         <Link to={`/product/${product.slug}`} className={`links`}>
           <Card.Title className="product__title">{product.name}</Card.Title>
         </Link>
@@ -42,7 +43,12 @@ function Product({ product }) {
             Out of stock
           </Button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
+          <Button
+            variant="outline-dark"
+            onClick={() => addToCartHandler(product)}
+          >
+            Add to cart
+          </Button>
         )}
       </Card.Body>
     </Card>

@@ -10,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: #212529; */
+  background-color: rgb(255, 245, 233);
 }
 .links {
   text-decoration: none; /*remove underline from bootstrap Link tag*/
@@ -23,14 +25,14 @@ main {
   flex: 1; /*this with min height of its parent will push footer sibling on the bottom*/
 }
 /*The home image intro*/
-.home__intro {
+/* .home__intro {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 .home__image {
   flex: 7;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   object-fit: cover;
   object-position: top center;
@@ -41,13 +43,14 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-}
+} */
 /**/
-.btn-primary {
+/* .btn-primary {
   background-color: #f0c040;
-  color: #000000; /*maybe change up colors of cart btn*/
+  color: #000000; 
   border: none;
-}
+} */
+
 .btn-outline-dark {
   font-weight: 600;
 }
@@ -128,18 +131,4 @@ main {
 .caption-color .btn {
   font-size: 1.2rem;
   margin-bottom: 15px;
-}
-/*Error*/
-.error {
-  text-align: center;
-}
-.error__header {
-  margin-top: 10vh;
-  font-size: 3rem;
-}
-.error__paragraph {
-  font-size: 1.7rem;
-}
-.error__button {
-  font-size: 1.4rem;
 }
