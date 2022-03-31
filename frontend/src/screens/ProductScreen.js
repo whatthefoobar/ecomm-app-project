@@ -129,7 +129,7 @@ function ProductScreen() {
                   <ListGroup.Item>
                     <div className="d-grid">
                       {/* d-grid makes btn full-width */}
-                      <Button onClick={addToCartHandler} variant="primary">
+                      <Button onClick={addToCartHandler} variant="outline-dark">
                         Add to Cart
                       </Button>
                       {/* css gold btn overrides button primary set by bootsrap but not on hover as its not specified and in bs it is */}

@@ -13,7 +13,7 @@ import axios from 'axios';
 
 export default function CartScreen() {
   const navigate = useNavigate();
-  const { state, dispatch: ctxDispatch } = useContext(Store); //this!
+  const { state, dispatch: ctxDispatch } = useContext(Store); //this is what we reuse from Store each time we wanna use our states
   const {
     cart: { cartItems },
   } = state; // take from state

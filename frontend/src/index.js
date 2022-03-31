@@ -12,7 +12,8 @@ ReactDOM.render(
       <HelmetProvider>
         <App />
       </HelmetProvider>
-    </StoreProvider>
+    </StoreProvider>{' '}
+    {/* this for state mngmnt and passing states */}
   </React.StrictMode>,
   document.getElementById('root')
 );
