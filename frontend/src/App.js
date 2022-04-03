@@ -15,6 +15,8 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import CarouselHome from './screens/CarouselHome';
 import Error from './screens/Error';
 import Navigationbar from './components/Navigationbar';
+import OrderScreen from './screens/OrderScreen';
+import Footer from './components/Footer';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -31,32 +33,30 @@ function App() {
       <div className="d-flex flex-column site-container">
         <ToastContainer position="bottom-center" limit={1} />{' '}
         {/* for that snazzy error msg box when login error */}
-        <header>
-          <Navigationbar
-            cart={cart}
-            userInfo={userInfo}
-            signoutHandler={signoutHandler}
-          />
-        </header>
-        <main>
-          <Container className="mt-3">
-            <Routes>
-              <Route path="/product/:slug" element={<ProductScreen />} />
-              <Route path="/cart" element={<CartScreen />} />
-              <Route path="/signin" element={<SigninScreen />} />
-              <Route path="/signup" element={<SignupScreen />} />
-              <Route path="/shipping" element={<ShippingAddressScreen />} />
-              <Route path="/payment" element={<PaymentMethodScreen />}></Route>
-              <Route path="/placeorder" element={<PlaceOrderScreen />} />
-              <Route path="/products" element={<HomeScreen />} />
-              <Route path="/" element={<CarouselHome />} />
-              <Route path="*" element={<Error />} />
-            </Routes>
-          </Container>
-        </main>
-        <footer>
-          <div className="text-center">All rights reserved</div>
-        </footer>
+        {/* Navbar here */}
+        <Navigationbar
+          cart={cart}
+          userInfo={userInfo}
+          signoutHandler={signoutHandler}
+        />
+        {/* Main content here */}
+        <Container className="mt-3">
+          <Routes>
+            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/cart" element={<CartScreen />} />
+            <Route path="/signin" element={<SigninScreen />} />
+            <Route path="/signup" element={<SignupScreen />} />
+            <Route path="/shipping" element={<ShippingAddressScreen />} />
+            <Route path="/payment" element={<PaymentMethodScreen />}></Route>
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
+            <Route path="/order/:id" element={<OrderScreen />}></Route>
+            <Route path="/products" element={<HomeScreen />} />
+            <Route path="/" element={<CarouselHome />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </Container>
+        {/* Footer content here */}
+        {/* <Footer /> */}
       </div>
     </Router>
   );
