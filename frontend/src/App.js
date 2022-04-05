@@ -16,7 +16,7 @@ import CarouselHome from './screens/CarouselHome';
 import Error from './screens/Error';
 import Navigationbar from './components/Navigationbar';
 import OrderScreen from './screens/OrderScreen';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
