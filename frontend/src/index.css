@@ -26,6 +26,9 @@ ul {
 .site-container {
   min-height: 100vh;
 }
+.position-relative {
+  position: relative;
+}
 
 main {
   flex: 1; /*this with min height of its parent will push footer sibling on the bottom*/

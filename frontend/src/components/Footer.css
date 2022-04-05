@@ -1,5 +1,12 @@
 .footer {
-  position: absolute;
+  /* margin-top: 40px;
+  position: absolute; */
   bottom: 0;
   width: 100%;
+  background-color: rgb(33, 37, 41);
+  color: white;
+}
+.gap {
+  padding-top: 10px;
+  gap: 15px;
 }

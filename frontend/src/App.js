@@ -30,7 +30,7 @@ function App() {
   };
   return (
     <Router>
-      <div className="d-flex flex-column site-container">
+      <div className="d-flex flex-column site-container position-relative">
         <ToastContainer position="bottom-center" limit={1} />{' '}
         {/* for that snazzy error msg box when login error */}
         {/* Navbar here */}
@@ -40,7 +40,7 @@ function App() {
           signoutHandler={signoutHandler}
         />
         {/* Main content here */}
-        <Container className="mt-3">
+        <Container className="mt-3 mb-5 ">
           <Routes>
             <Route path="/product/:slug" element={<ProductScreen />} />
             <Route path="/cart" element={<CartScreen />} />

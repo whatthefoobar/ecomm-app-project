@@ -1,87 +1,123 @@
 import React from 'react';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
-  //   const year = new Date().getFullYear();
-  //   console.log(year);
   return (
-    <div class=" footer mt-3 p-4 bg-dark text-white">
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3 item">
-              <h3>Services</h3>
-              <ul>
+    <footer className="footer">
+      <div className="container">
+        <div className="row mt-4">
+          <div className="col-md-4 col-sm-6">
+            <div className="footer-info-single">
+              <h2 className="title mb-3">Siren</h2>
+              <ul className="list-unstyled">
                 <li>
-                  <a href="#" className="links text-white">
-                    Service 1
+                  <a href="/" title="" className="links text-white">
+                    About us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="links text-white">
-                    Service 2
+                  <a href="/" title="" className="links text-white">
+                    Sustainability
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="links text-white">
-                    Service 3
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-md-3 item">
-              <h3>About</h3>
-              <ul>
-                <li>
-                  <a href="#" className="links text-white">
-                    Company
+                  <a href="/" title="" className="links text-white">
+                    Press
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="links text-white">
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="links text-white">
-                    Careers
+                  <a href="/" title="" className="links text-white">
+                    Corporate
                   </a>
                 </li>
               </ul>
-            </div>
-            <div class="col-md-6 item text">
-              <h3>Company Name</h3>
-              <p>
-                Praesent sed lobortis mi. Suspendisse vel placerat ligula.
-                Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis
-                tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel
-                in justo.
-              </p>
-            </div>
-            <div class="col item social">
-              <a href="#" className="links text-white">
-                <i class="icon ion-social-facebook"></i>
-              </a>
-              <a href="#" className="links text-white">
-                <i class="icon ion-social-twitter"></i>
-              </a>
-              <a href="#" className="links text-white">
-                <i class="icon ion-social-snapchat"></i>
-              </a>
-              <a href="#" className="links text-white">
-                <i class="icon ion-social-instagram"></i>
-              </a>
             </div>
           </div>
-          {/* <p class="copyright">Siren {year}</p> */}
+
+          <div className="col-md-4 col-sm-6">
+            <div className="footer-info-single">
+              <h2 className="title mb-3">Customer Service</h2>
+              <ul className="list-unstyled">
+                <li>
+                  <a href="/" title="" className="links text-white">
+                    Help
+                  </a>
+                </li>
+                <li>
+                  <a href="/" title="" className="links text-white">
+                    FAQ's
+                  </a>
+                </li>
+                <li>
+                  <a href="/" title="" className="links text-white">
+                    Shipping
+                  </a>
+                </li>
+                <li>
+                  <a href="/" title="" className="links text-white">
+                    Return / Refund policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-md-4 col-sm-6">
+            <div className="footer-info-single">
+              <h2 className="title mb-3">Contact Us</h2>
+              <ul className="list-unstyled">
+                <li>
+                  <a href="/" title="" className="links text-white">
+                    1-800-999 999
+                  </a>
+                </li>
+                <li>
+                  <a href="/" title="" className="links text-white">
+                    contact@siren.com
+                  </a>
+                </li>
+
+                <li className="social-media ">
+                  <ul className="d-flex justify-content-start gap">
+                    <li>
+                      <a href="/" title="Facebook" className="links text-white">
+                        <FaFacebookF />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/"
+                        title="Instagrom"
+                        className="links text-white"
+                      >
+                        <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" title="Twitter">
+                        <FaTwitter />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/" title="LinkedIn" className="links text-white">
+                        <FaLinkedinIn />
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 
 export default Footer;
-
-// {
-//   /* <div className="text-center">All rights reserved FoofyFoof</div> */
-// }

@@ -43,7 +43,7 @@ export default function CartScreen() {
         <title>Shopping Cart</title>
       </Helmet>
       <h1>Shopping Cart</h1>
-      <Row>
+      <Row className="mb-4">
         <Col md={8}>
           {cartItems.length === 0 ? (
             <MessageBox>
