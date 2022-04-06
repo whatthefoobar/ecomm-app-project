@@ -1,6 +1,6 @@
 # full-ecomm-MERN
 Data interaction brief
-Mission:
+MISSION:
 The undisclosed brick and mortar store has decided it's time to go online! To be able to give all their customers the best experience, regardless if they're buying from their ph9one or their smart speaker they want an API to easily support and extend their offering.
 
 REQUIREMENTS :
