@@ -108,7 +108,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      //_id: '7',
+      //_id: '8',
       name: 'Siren handbag',
       slug: 'siren-handbag',
       category: 'handbag',
