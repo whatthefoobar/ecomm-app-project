@@ -23,11 +23,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // access info from req.body that we have from our routes ex from our shipping form in orderRoutes
 
-app.use('/api/seed', seedRouter);
+app.use('/api/seed', seedRouter); // use seedRouter to handle endpoints that begin w /api/seed
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 
+//for deployment w heroku:
 const __dirname = path.resolve(); // returns current directory
 app.use(express.static(path.join(__dirname, '/frontend/build'))); // serve this
 app.get('*', (req, res) =>

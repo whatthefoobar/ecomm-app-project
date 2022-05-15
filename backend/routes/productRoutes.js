@@ -6,7 +6,7 @@ const productRouter = express.Router();
 productRouter.get('/', async (req, res) => {
   const products = await Product.find(); // returns all products
   res.send(products);
-});
+}); //-> / added at the end of the endpoint specified in server.js for this ProductRoutes
 
 productRouter.get('/slug/:slug', async (req, res) => {
   const product = await Product.findOne({ slug: req.params.slug });

@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 // for the animated line above screen that fills with each completed step of the sign-in shipping payment place order steps
+//this is used in PlaceOrderScreen
 export default function CheckoutSteps(props) {
   return (
     <Row className="checkout-steps">
