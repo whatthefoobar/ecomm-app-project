@@ -30,7 +30,7 @@ app.use('/api/orders', orderRouter);
 
 //for deployment w heroku:
 const __dirname = path.resolve(); // returns current directory
-app.use(express.static(path.join(__dirname, '/frontend/build'))); // serve this
+app.use(express.static(path.join(__dirname, '/frontend/build'))); // serve this as static files
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
