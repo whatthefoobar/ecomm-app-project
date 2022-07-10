@@ -1,6 +1,10 @@
 {
   "name": "full-ecomm-mern",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.15.0",
+    "npm": "8.13.2"
+  },
   "description": "Learn with me how to create a full e-commerce webstite with a cart authentication and checkout option\r Optional: admin options",
   "main": "index.js",
   "scripts": {
