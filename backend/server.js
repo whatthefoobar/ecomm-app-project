@@ -23,6 +23,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // access info from req.body that we have from our routes ex from our shipping form in orderRoutes
 
+app.get('/api/keys/paypal', (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
+});
+
 app.use('/api/seed', seedRouter); // use seedRouter to handle endpoints that begin w /api/seed
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
