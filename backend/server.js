@@ -18,6 +18,13 @@ mongoose
     console.log(err.message);
   });
 
+// try {
+//   await mongoose.connect(process.env.MONGODB_URI);
+//   console.log('Connected to MongoDB');
+// } catch (error) {
+//   console.log(error.message);
+// }
+
 const app = express();
 
 app.use(express.json());
