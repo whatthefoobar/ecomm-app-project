@@ -17,6 +17,7 @@ import Error from './screens/Error';
 import Navigationbar from './components/Navigationbar';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
+import ProfileScreen from './screens/ProfileScreen';
 // import Footer from './components/Footer';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
+    window.location.href = '/signin';
   };
   return (
     <Router>
@@ -48,14 +50,13 @@ function App() {
             <Route path="/signin" element={<SigninScreen />} />
             <Route path="/signup" element={<SignupScreen />} />
             <Route path="/shipping" element={<ShippingAddressScreen />} />
-            <Route
-              path="/orderhistory"
-              element={<OrderHistoryScreen />}
-            ></Route>
-            <Route path="/payment" element={<PaymentMethodScreen />}></Route>
+            <Route path="/orderhistory" element={<OrderHistoryScreen />} />
+            <Route path="/payment" element={<PaymentMethodScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
-            <Route path="/order/:id" element={<OrderScreen />}></Route>
+            <Route path="/order/:id" element={<OrderScreen />} />
             <Route path="/products" element={<HomeScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
+
             <Route path="/" element={<CarouselHome />} />
             <Route path="*" element={<Error />} />
           </Routes>
