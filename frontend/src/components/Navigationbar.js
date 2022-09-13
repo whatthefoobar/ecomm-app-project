@@ -10,43 +10,46 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigationbar = ({ cart, userInfo, signoutHandler }) => {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Container className="nav-bar">
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
         <LinkContainer to="/">
           <Navbar.Brand className="nav__logo">Siren</Navbar.Brand>
         </LinkContainer>
-        <Nav>
-          <Link to="/cart" className="nav-link ">
-            Cart
-            {cart.cartItems.length > 0 && (
-              <Badge pill bg="danger">
-                {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-              </Badge>
-            )}
-          </Link>
-          {userInfo ? (
-            <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-              <LinkContainer to="/profile">
-                <NavDropdown.Item>User Profile</NavDropdown.Item>
-              </LinkContainer>
-              <LinkContainer to="/orderhistory">
-                <NavDropdown.Item>Order History</NavDropdown.Item>
-              </LinkContainer>
-              <NavDropdown.Divider />
-              <Link
-                className="dropdown-item"
-                to="#signout"
-                onClick={signoutHandler}
-              >
-                Sign Out
-              </Link>
-            </NavDropdown>
-          ) : (
-            <Link className="nav-link" to="/signin">
-              Sign In
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto  w-100  justify-content-end">
+            <Link to="/cart" className="nav-link">
+              Cart
+              {cart.cartItems.length > 0 && (
+                <Badge pill bg="danger">
+                  {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                </Badge>
+              )}
             </Link>
-          )}
-        </Nav>
+            {userInfo ? (
+              <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                <LinkContainer to="/profile">
+                  <NavDropdown.Item>User Profile</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/orderhistory">
+                  <NavDropdown.Item>Order History</NavDropdown.Item>
+                </LinkContainer>
+                <NavDropdown.Divider />
+                <Link
+                  className="dropdown-item"
+                  to="#signout"
+                  onClick={signoutHandler}
+                >
+                  Sign Out
+                </Link>
+              </NavDropdown>
+            ) : (
+              <Link className="nav-link" to="/signin">
+                Sign In
+              </Link>
+            )}
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

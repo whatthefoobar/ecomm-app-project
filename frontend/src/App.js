@@ -16,6 +16,7 @@ import CarouselHome from './screens/CarouselHome';
 import Error from './screens/Error';
 import Navigationbar from './components/Navigationbar';
 import OrderScreen from './screens/OrderScreen';
+import OrderHistoryScreen from './screens/OrderHistoryScreen';
 // import Footer from './components/Footer';
 
 function App() {
@@ -47,6 +48,10 @@ function App() {
             <Route path="/signin" element={<SigninScreen />} />
             <Route path="/signup" element={<SignupScreen />} />
             <Route path="/shipping" element={<ShippingAddressScreen />} />
+            <Route
+              path="/orderhistory"
+              element={<OrderHistoryScreen />}
+            ></Route>
             <Route path="/payment" element={<PaymentMethodScreen />}></Route>
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
             <Route path="/order/:id" element={<OrderScreen />}></Route>

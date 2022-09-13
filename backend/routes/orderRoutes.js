@@ -24,6 +24,16 @@ orderRouter.post(
   })
 );
 
+// user's order history, put before /:id to not be handled as an id by the  '/:id' get request
+orderRouter.get(
+  '/myorders',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({ user: req.user._id }); // filter by user, where the ._id is comming from isAuth mw
+    res.send(orders);
+  })
+);
+
 orderRouter.get(
   '/:id',
   isAuth,

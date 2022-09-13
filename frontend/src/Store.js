@@ -80,4 +80,6 @@ export function StoreProvider(props) {
   const value = { state, dispatch };
   return <Store.Provider value={value}>{props.children} </Store.Provider>;
 }
-// wherever we need the state and how to update it import useContext and thisStore module and call on state, dispatch form useReducer
+// store.js has all state that we want accessible globally
+// wherever we need the state in another component and to update it, just use useContext and this Store.js (like so: useContext(store)) and call on state, dispatch form useReducer
+// for example on how to use the cart state and to update it with dispatch see CartScreen.js there we call an action to update the state cart with dispatch, actions to moddify cart state are as seen above
