@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify'; // for that snazzy error msg box when login error
+import { toast, ToastContainer } from 'react-toastify'; // for that snazzy error msg box when login error
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import Container from 'react-bootstrap/Container';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
 import SigninScreen from './screens/SigninScreen';
@@ -18,7 +18,11 @@ import Navigationbar from './components/Navigationbar';
 import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
-// import Footer from './components/Footer';
+import Button from 'react-bootstrap/Button';
+import { getError } from './utils';
+import axios from 'axios';
+import SearchBox from './components/SearchBox';
+import Sidebar from './components/Sidebar';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -31,9 +35,31 @@ function App() {
     localStorage.removeItem('paymentMethod');
     window.location.href = '/signin';
   };
+
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const [categories, setCategories] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchCategories = async () => {
+  //     try {
+  //       const { data } = await axios.get(`/api/products/categories`);
+  //       setCategories(data);
+  //     } catch (err) {
+  //       toast.error(getError(err));
+  //     }
+  //   };
+  //   fetchCategories();
+  // }, []);
+
   return (
     <Router>
-      <div className="d-flex flex-column site-container position-relative">
+      <div
+        className={
+          sidebarIsOpen
+            ? 'd-flex flex-column site-container active-cont'
+            : 'd-flex flex-column site-container'
+        }
+      >
         <ToastContainer position="bottom-center" limit={1} />{' '}
         {/* for that snazzy error msg box when login error */}
         {/* Navbar here */}
@@ -41,7 +67,14 @@ function App() {
           cart={cart}
           userInfo={userInfo}
           signoutHandler={signoutHandler}
+          // sidebarIsOpen={sidebarIsOpen}
+          // setSidebarIsOpen={setSidebarIsOpen}
         />
+        {/* <Sidebar
+          categories={categories}
+          sidebarIsOpen={sidebarIsOpen}
+          setSidebarIsOpen={setSidebarIsOpen}
+        /> */}
         {/* Main content here */}
         <Container className="mt-3 mb-5 ">
           <Routes>

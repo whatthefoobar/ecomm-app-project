@@ -140,3 +140,26 @@ main {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
+/* sidebar */
+.navbar-brand {
+  font-weight: bold;
+}
+.side-navbar {
+  padding-top: 20px;
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  /* background-color: #100901; */
+  transition: 0.5s;
+}
+
+.site-container {
+  transition: 0.4s;
+}
+.active-cont {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
