@@ -1,3 +1,5 @@
+Note to self: Heroku free tier is dead, need to deploy app 's backend through RENDER. 
+
 # full-ecomm-MERN
 Data interaction brief
 
