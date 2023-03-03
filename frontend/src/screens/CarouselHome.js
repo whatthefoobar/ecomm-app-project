@@ -1,7 +1,7 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
 // import Container from 'react-bootstrap/esm/Container';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const CarouselHome = () => {
   return (
@@ -9,7 +9,7 @@ const CarouselHome = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 height"
-          src="/images/home221.jpg"
+          src="/images/home1.jpg"
           alt="First slide"
         />
         <Carousel.Caption className="caption-color">
@@ -27,7 +27,7 @@ const CarouselHome = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 height"
-          src="/images/home.jpeg"
+          src="/images/home2.jpg"
           alt="Second slide"
         />
 
@@ -43,7 +43,7 @@ const CarouselHome = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 height"
-          src="/images/home5.jpg"
+          src="/images/home3.jpg"
           alt="Third slide"
         />
 

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify"; // for that snazzy error msg box when login error
 import "react-toastify/dist/ReactToastify.css";
-import HomeScreen from "./screens/HomeScreen";
+import ProductsScreen from "./screens/ProductsScreen";
 import ProductScreen from "./screens/ProductScreen";
 import Container from "react-bootstrap/Container";
 import { useContext, useState } from "react";
@@ -56,8 +56,8 @@ function App() {
             : "d-flex flex-column site-container"
         }
       >
-        <ToastContainer position="bottom-center" limit={1} />{" "}
         {/* for that snazzy error msg box when login error */}
+        <ToastContainer position="bottom-center" limit={1} />{" "}
         {/* Navbar here */}
         <Navigationbar
           cart={cart}
@@ -66,11 +66,6 @@ function App() {
           // sidebarIsOpen={sidebarIsOpen}
           // setSidebarIsOpen={setSidebarIsOpen}
         />
-        {/* <Sidebar
-          categories={categories}
-          sidebarIsOpen={sidebarIsOpen}
-          setSidebarIsOpen={setSidebarIsOpen}
-        /> */}
         {/* Main content here */}
         <Container className="mt-3 mb-5 ">
           <Routes>
@@ -83,7 +78,7 @@ function App() {
             <Route path="/payment" element={<PaymentMethodScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
             <Route path="/order/:id" element={<OrderScreen />} />
-            <Route path="/products" element={<HomeScreen />} />
+            <Route path="/products" element={<ProductsScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
 
             <Route path="/" element={<CarouselHome />} />
