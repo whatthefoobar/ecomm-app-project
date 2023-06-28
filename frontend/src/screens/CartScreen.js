@@ -48,7 +48,7 @@ export default function CartScreen() {
           {cartItems.length === 0 ? (
             <MessageBox>
               Cart is empty.{' '}
-              <Link to="/" className="links">
+              <Link to="/products" className="links">
                 Go Shopping
               </Link>
             </MessageBox>
